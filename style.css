@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* Flex container for the div which contains Header,Main, and Footer */
+#HMF {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow it to grow and fill the remaining space */
+  width: 100%;
+  height: auto;
+  overflow: auto; /* Prevent overflow */
+  margin-right: 5px;
+  margin-left: 0px;
+}
+/*Header style*/
+#HMF header {
+  border-bottom: 1px solid black;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+/*Header image style */
+#HMF header img {
+  width: 100px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*Header h1 style */
+#HMF header h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*Header ul style */
+#HMF header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/*Header ul li style */
+#HMF header nav ul li {
+  margin: 0 10px;
+}
+
+/* Universal link styles */
+a {
+  color: #0021db;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+a:hover,
+a:focus {
+  background-color: rgb(226, 222, 222);
+  color: #61108cd9; /* Darker on hover */
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* index Main content style */
+#HMF main {
+  margin-right: 0;
+  text-align: center;
+  flex: 1;
+}
+#HMF main p {
+  margin-right: 5px;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#categorySelect {
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+#categorySelect option {
+  border-radius: 5px;
+  padding: 5px;
+}
+#HMF .gallery-section {
+  transition: opacity 0.5s ease-in-out;
+}
+#HMF .gallery-section img {
+  margin: 0 5px;
+}
+
+#HMF section {
+  display: none;
+  margin-top: 10px;
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  text-align: center;
+}
+#imageModal span {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#imageModal img {
+  max-width: 90%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
+#imageModal #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+main form label {
+  font-weight: 500;
+  max-width: 800px;
+  font-weight: 550;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* about Main content style */
+#HMF #aboutMain {
+  margin-right: 0;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+}
+#HMF #aboutMain p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* contact Main content style */
+#HMF #contactMain p {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 20px auto;
+  max-width: 800px;
+}
+#HMF #contactMain form {
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: left;
+}
+#HMF #contactMain form input[type="text"],
+#HMF #contactMain form input[type="email"],
+#HMF #contactMain form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#HMF #contactMain form button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 1px auto 5px auto;
+  display: block;
+}
+#HMF #contactMain form button:hover {
+  background-color: #0056b3;
+  color: #121111;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* signIn Main content style */
+#HMF #signInMain form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: left;
+  max-width: 400px;
+}
+#HMF #signInMain form input[type="text"],
+#HMF #signInMain form input[type="password"] {
+  width: 91%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+#HMF #signInMain form button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 1px auto 5px auto;
+  display: block;
+  margin-bottom: 10px;
+}
+#HMF #signInMain form button:hover {
+  background-color: #0056b3;
+  color: #121111;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* signUp Main content style */
+#HMF #signUpMain form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: left;
+  max-width: 400px;
+}
+#HMF #signUpMain form input[type="text"],
+#HMF #signUpMain form input[type="email"],
+#HMF #signUpMain form input[type="password"] {
+  width: 91%;
+  /*margin-top: 5px;
+*/
+  margin-bottom: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+#HMF #signUpMain form button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 1px auto 5px auto;
+  display: block;
+  margin-bottom: 10px;
+}
+#HMF #signUpMain form button:hover {
+  background-color: #0056b3;
+  color: #121111;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* Footer style */
+#HMF footer {
+  background-color: #1d1c1c;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 0px;
+  color: #fff;
+}
+#HMF footer form {
+  margin-top: 10px;
+}
+#HMF footer form input[type="email"] {
+  padding: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#HMF footer form input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.sidebar {
+  background-color: #f0f0f0;
+  border-right: 1px solid black;
+  height: auto;
+  width: 15%;
+  padding: 0px 10px 0 2px;
+  flex-shrink: 0; /* Don't allow it to shrink */
+  flex-grow: 0; /* Don't allow it to grow */
+}
+
+.sidebar ul {
+  margin: 25px auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.sidebar li a {
+  color: #121111;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 5px;
+}
+.sidebar li a:hover {
+  background-color: #06a8c5;
+}
+
+#toggleSidebarContent {
+  position: relative;
+  top: 10px;
+  left: 1px;
+  z-index: 1000;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* dark mode styles for entire site */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode #HMF header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode a {
+  color: #bab5c0;
+  background-color: #312b2b;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode main {
+  background-color: #121212;
+}
+
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode button,
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #555353;
+  color: #ffffff;
+  border-color: #555;
+}
