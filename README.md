@@ -21,3 +21,5 @@ A website showcasing a curated collection of high-quality nature wallpapers.
 
 1. Clone the repository: `https://github.com/MohamedNabil3/Nature-Wallpapers-Gallery.git`
 2. Open the `index.html` file in a web browser to view the website
+
+if you wanna see a peak at the project click here https://mohamednabil3.github.io/Nature-Wallpapers-Gallery/
