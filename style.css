@@ -329,6 +329,9 @@ main form label {
   border-radius: 5px;
   cursor: pointer;
 }
+#HMF footer a {
+  margin-top: 2px;
+}
 
 /* --------------------------------------------------------------------------------------------------------- */
 
@@ -431,6 +434,10 @@ body.dark-mode textarea {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .sidebar li {
+    padding: 0 1px;
   }
 
   .sidebar a {
