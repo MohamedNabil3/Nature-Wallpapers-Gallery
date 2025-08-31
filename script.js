@@ -146,15 +146,20 @@ document.addEventListener("DOMContentLoaded", function () {
       const toggleButton = document.getElementById("toggleSidebarContent");
       if (sidebarContent.style.display === "none") {
         sidebarContent.style.display = "flex";
-        sidebarContent.style.flexDirection = "column";
-        sidebarContent.style.alignItems = "flex-start";
-        sidebarContent.style.justifyContent = "center";
+        // sidebarContent.style.flexDirection = "row";
+        // sidebarContent.style.flexWrap = "wrap";
+        // sidebarContent.style.justifyContent = "center";
+        // sidebarContent.style.alignItems = "center";
         // Place the button just inside the right edge of the sidebar
-        sidebar.style.width = "15%";
-        toggleButton.style.left = 1 + "px";
+
+        const mediaQuery = window.matchMedia("(max-width: 767px)");
+        if (mediaQuery.matches) {
+          sidebar.style.width = "20%";
+        } else {
+          sidebar.style.width = "10%";
+        }
       } else {
         sidebarContent.style.display = "none";
-        toggleButton.style.left = "1px";
         sidebar.style.width = "auto";
       }
     });

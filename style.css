@@ -38,7 +38,7 @@ body {
 /*Header image style */
 #HMF header img {
   width: 100px;
-  height: auto;
+  max-height: auto;
   display: inline-block;
   vertical-align: middle;
 }
@@ -56,6 +56,8 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  row-gap: 5px;
   flex-wrap: wrap;
 }
 /*Header ul li style */
@@ -70,6 +72,7 @@ a {
   transition: color 0.3s ease, text-decoration 0.3s ease;
   padding: 5px;
   border-radius: 5px;
+  display: inline-block;
 }
 
 a:hover,
@@ -94,6 +97,7 @@ a:focus {
   line-height: 1.6;
   font-size: 16px;
   font-weight: 500;
+  padding: 5px;
 }
 
 #categorySelect {
@@ -110,11 +114,12 @@ a:focus {
 }
 #HMF .gallery-section img {
   margin: 0 5px;
+  max-height: 140px;
 }
 
 #HMF section {
   display: none;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 #imageModal {
@@ -169,7 +174,7 @@ main form label {
   padding: 20px;
 }
 #HMF #aboutMain p {
-  text-align: justify;
+  text-align: center;
   line-height: 1.8;
   font-size: 1.2em;
   font-weight: 500;
@@ -178,7 +183,9 @@ main form label {
 }
 
 /* --------------------------------------------------------------------------------------------------------- */
-
+#HMF #contactMain {
+  text-align: center;
+}
 /* contact Main content style */
 #HMF #contactMain p {
   text-align: center;
@@ -198,8 +205,7 @@ main form label {
 #HMF #contactMain form textarea {
   width: 90%;
   padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin: 6px auto;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -210,7 +216,7 @@ main form label {
   border-radius: 10px;
   padding: 10px 20px;
   cursor: pointer;
-  margin: 1px auto 5px auto;
+  margin: 1px auto 5px;
   display: block;
 }
 #HMF #contactMain form button:hover {
@@ -328,7 +334,7 @@ main form label {
   background-color: #f0f0f0;
   border-right: 1px solid black;
   height: auto;
-  width: 15%;
+  width: 10%;
   padding: 0px 10px 0 2px;
   flex-shrink: 0; /* Don't allow it to shrink */
   flex-grow: 0; /* Don't allow it to grow */
@@ -338,17 +344,21 @@ main form label {
   margin: 25px auto;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 10px;
   list-style: none;
+  text-align: center;
+}
+.sidebar li {
+  width: 100%;
+  padding: 5px;
 }
 
 .sidebar li a {
   color: #121111;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding: 5px;
 }
@@ -403,4 +413,30 @@ body.dark-mode textarea {
   background-color: #555353;
   color: #ffffff;
   border-color: #555;
+}
+
+@media (max-width: 767px) {
+  * {
+    font-size: 14px;
+  }
+  .sidebar {
+    width: 20%;
+  }
+
+  .sidebar ul {
+    margin: 25px auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar a {
+    display: block;
+    margin: 0;
+  }
+
+  #HMF header nav ul {
+    display: none;
+  }
 }
